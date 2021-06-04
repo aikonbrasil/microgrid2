@@ -201,6 +201,7 @@ def processingipname(varname):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
+    # TODO: IN THIS POINT You can choose the number of folders to be processed 
     for index_folder_number in range(7):
         aunx_index_num = index_folder_number+1
         directory = r'./field_info/Result_data_'+str(aunx_index_num)
