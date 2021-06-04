@@ -10,3 +10,6 @@ The unique parameter to be changed is the directory path where the dataset is st
 The last version of it is saved in main_v3.py and the modification on the FOlder can be done in the following line:
 
 ![Image](./figures/code_reference.png)
+
+Requirements:
+python-numpy, python-matplotlib, screen.
