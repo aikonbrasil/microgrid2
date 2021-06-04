@@ -338,6 +338,32 @@ if __name__ == '__main__':
                     vec_to_be_append_by_mean = [info_to_be_append1,info_to_be_append2]
                     vec_sampling_latency.append(np.mean(vec_to_be_append_by_mean))
 
+                #PLOTTING INDIVIDUAL metrics - RELIABILITY
+
+                plt.plot(vector_to_plot_reliability)
+                plt.title('Reliability - ' + filename[:-4])
+                plt.xlabel('Samples per second (s)')
+                plt.ylabel('Reliability (%)')
+                nf1 = path_new_folder_plots + filename[:-4]+ '_reliability.png'
+                plt.savefig(nf1)
+                plt.clf()
+                mdicc_1 = {"reliability": vector_to_plot_reliability}
+                nm1 = path_new_folder_mats + filename[:-4]+ '_reliability.mat'
+                savemat(nm1, mdicc_1)
+
+                #PLOTTING INDIVIDUAL metrics - LATENCY
+
+                plt.plot(vector_to_plot_latency)
+                plt.title('Latency - ' + filename[:-4])
+                plt.xlabel('Samples per second (s)')
+                plt.ylabel('Latency (ms)')
+                nf2 = path_new_folder_plots + filename[:-4]+ '_latency.png'
+                plt.savefig(nf2)
+                plt.clf()
+                mdicc_2 = {"reliability": vector_to_plot_reliability}
+                nm2 = path_new_folder_mats + filename[:-4]+ '_latency.mat'
+                savemat(nm2, mdicc_2)
+
 
 
         print(len(vector_features_sorted_unique_x))
