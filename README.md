@@ -7,4 +7,6 @@ The metrics used on this project are an end-to-end performance indicators, at th
 
 The unique parameter to be changed is the directory path where the dataset is stored.
 
-The last version of it is saved in main_v3.py
+The last version of it is saved in main_v3.py and the modification on the FOlder can be done in the following line:
+
+![Image](./figures/code_reference.png)
