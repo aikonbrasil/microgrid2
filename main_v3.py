@@ -375,7 +375,7 @@ if __name__ == '__main__':
                     nf2 = path_new_folder_plots + '/' +  filename[:-4]+ '_latency.png'
                     plt.savefig(nf2)
                     plt.clf()
-                    mdicc_2 = {"reliability": vector_to_plot_latency}
+                    mdicc_2 = {"latency": vector_to_plot_latency}
                     nm2 = path_new_folder_mats + '/' +  filename[:-4]+ '_latency.mat'
                     savemat(nm2, mdicc_2)
 
