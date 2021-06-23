@@ -201,8 +201,8 @@ def processingipname(varname):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    # TODO: IN THIS POINT You can choose the number of folders to be processed 
-    for index_folder_number in range(7):
+    # TODO: IN THIS POINT You can choose the number of folders to be processed
+    for index_folder_number in range(11):
         aunx_index_num = index_folder_number+1
         directory = r'./field_info/Result_data_'+str(aunx_index_num)
         #directory = r'./field_info/Result_data_7'
@@ -308,7 +308,7 @@ if __name__ == '__main__':
                     # subsampling of info vector with an specific size of window,
                     vector_to_plot_reliability = subsampling_max(info_array, 1)
 
-                    # FOR latency DATasET
+                    # FOR reliability DATasET
                     if flag_same_sampling  == 1:
                         info_to_be_append11 = np.mean(vector_to_plot_reliability)
                         info_to_be_append22 = aux_mean_rel
@@ -375,7 +375,7 @@ if __name__ == '__main__':
                     nf2 = path_new_folder_plots + '/' +  filename[:-4]+ '_latency.png'
                     plt.savefig(nf2)
                     plt.clf()
-                    mdicc_2 = {"reliability": vector_to_plot_reliability}
+                    mdicc_2 = {"reliability": vector_to_plot_latency}
                     nm2 = path_new_folder_mats + '/' +  filename[:-4]+ '_latency.mat'
                     savemat(nm2, mdicc_2)
 
