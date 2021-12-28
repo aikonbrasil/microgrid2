@@ -199,7 +199,7 @@ def processingipname(varname):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    directory = r'./field_info/Result_data_2'
+    directory = r'./field_info/2ndResults/Result_data_2'
     vector_info_tobe_sorted = os.listdir(directory)
     print(type(vector_info_tobe_sorted))
 
@@ -299,10 +299,10 @@ if __name__ == '__main__':
         plt.show()
         print(len(vector_to_plot))
 
-        namefigure = dir_filename[:-4] + '_latency.png'
-        plt.savefig(namefigure)
+     #   namefigure = dir_filename[:-4] + '_latency.png'
+     #   plt.savefig(namefigure)
 
-        mdic = {"latency": vector_to_plot}
-        savemat("temp_latency.mat", mdic)
+      #  mdic = {"latency": vector_to_plot}
+      #  savemat("temp_latency.mat", mdic)
 
 

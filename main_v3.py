@@ -202,7 +202,9 @@ def processingipname(varname):
 if __name__ == '__main__':
 
     # TODO: IN THIS POINT You can choose the number of folders to be processed
-    for index_folder_number in range(11):
+    # TODO: in MATLAB clean the information before to generate the Sampling vs metric (latency or reliability)
+
+    for index_folder_number in range(9,10,1):
         aunx_index_num = index_folder_number+1
         directory = r'./field_info/Result_data_'+str(aunx_index_num)
         #directory = r'./field_info/Result_data_7'
@@ -325,7 +327,9 @@ if __name__ == '__main__':
                     arr_latency = np.array(latency_info)
 
                     # getting float format of the information which is originally string.
-                    offset = -30
+                    #offset = -30
+                    #offset = 36000-4350 # offset for Data_09
+                    offset = 36000-4350+1165-55 # offset for Data_10
                     info_latency = truly_string_to_float(arr_latency, offset)
 
                     # subsampling of info vector with an specific size of window, it will be used to match the
